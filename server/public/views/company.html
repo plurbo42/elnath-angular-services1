@@ -1,0 +1,16 @@
+<body>   
+
+<h1>Companies</h1>
+
+<ul>
+<li ng-repeat="company in vm.company.list">{{company.name}} - {{company.country}}</li>
+</ul>
+
+<form>
+    <h3>New Company</h3>
+    <input type="text" placeholder="Name" ng-model="vm.newCompany.name">
+    <input type="text" placeholder="Country" ng-model="vm.newCompany.country">
+    <button ng-click="vm.postCompany(vm.newCompany)">Submit</button>
+    {{vm.newCompany}}
+</form>
+</body>

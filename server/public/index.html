@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vendors/bootstrap.css">
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/angular-route/angular-route.js"></script>
+    <script src="scripts/client.js"></script>
+    <!-- Controllers -->
+    <script src="scripts/controllers/car.controller.js"></script>
+    <script src="scripts/controllers/company.controller.js"></script>
+    <!-- Services -->
+    <script src="scripts/services/company.service.js"></script>
+    <script src="scripts/services/car.service.js"></script>
+    
+    <title>Car App</title>
+</head>
+
+<body class="container" ng-app="CarApp">
+    <div class="jumbotron">
+        <h1>Car App</h1>
+        <hr>
+        <!-- <nav class="navbar"> -->
+        <a class="navbar-brand" href="#!cars">Cars</a>
+        <a class="navbar-brand" href="#!">Companies</a>
+        <!-- </nav> -->
+    </div>
+    <div id="viewDiv" class= "container">
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>
