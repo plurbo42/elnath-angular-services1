@@ -1,8 +1,24 @@
 <h1>Cars</h1>
 
-<ul>
-    <li ng-repeat="car in vm.car.list">{{car.name}} {{car.make}} {{car.model}} AKA {{car.nickname}} ({{car.country}})</li>
-</ul>
+<table class="table table-striped">
+    <th>Make</th>
+    <th>Model</th>
+    <th>Nickname</th>
+    <th>Country</th>
+    <th>Delete</th>
+    <th>Edit</th>
+    <tr ng-repeat="car in vm.car.list">
+            <td ng-hide="car.showEdit">{{car.make}}</td>
+            <td ng-show="car.showEdit"><select id="make" ng-options="company.id as company.name for company in vm.company.list track by company.id" ng-model="vm.updateCar.makeid"></select></td>
+            <td ng-hide="car.showEdit">{{car.model}}</td>
+            <td ng-show="car.showEdit"><input type="text" ng-model="vm.updateCar.model"></td>
+            <td>{{car.nickname}}</td>
+            <td>{{car.country}}</td>
+            <td><button ng-click="vm.deleteCar(car)">Delete</button></td>
+            <td><button ng-click="car.showEdit=!car.showEdit">Edit</button></td>
+                   
+    </tr>
+</table>
 
 <form>
     <h3>New Car</h3>
@@ -10,8 +26,7 @@
     <input type="text" ng-model="vm.newCar.model">
     <label for="year">Year</label>
     <input type="text" ng-model="vm.newCar.year">
-    <label for="make">Make</label>
-    <select id="make" ng-options="company.id as company.name for company in vm.company.list track by company.id.id" ng-model="vm.newCar.makeid"></select>
-    <button>Submit</button>
-    {{vm.newCar}}
+    <label for="make">Make</label> <td><button ng-click="car.showEdit=!car.showEdit">Edit</button></td>
+    <select id="make" ng-options="company.id as company.name for company in vm.company.list track by company.id" ng-model="vm.newCar.makeid"></select>
+    <button class="btn btn" ng-click="vm.postCar(vm.newCar)">Submit</button>
 </form>

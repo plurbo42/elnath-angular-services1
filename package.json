@@ -1,7 +1,6 @@
 {
   "name": "elnath-angular-routing",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "angular": "^1.6.7",
@@ -18,5 +17,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plurbo42/elnath-angular-services1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plurbo42/elnath-angular-services1/issues"
+  },
+  "homepage": "https://github.com/plurbo42/elnath-angular-services1#readme",
+  "description": ""
 }

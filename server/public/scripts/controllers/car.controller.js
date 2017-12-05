@@ -3,4 +3,6 @@ app.controller('CarController', ['CarService', 'CompanyService', function(CarSer
     self.car = CarService.cars;
     self.company = CompanyService.companies;
     self.newCar = CarService.newCar;
+    self.postCar = CarService.postCar;
+    self.deleteCar = CarService.deleteCar;
 }]);
